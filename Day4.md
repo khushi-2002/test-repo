@@ -1,15 +1,19 @@
-Day-4:
+# Day-4:
+
 
 Random function:
+
+---
 
 The function which produces random numbers b/w the range
 Example: import random-- > Python module : Piece of the code which can be used to use it in our programs
 random_number = random.randint(100,200): Random numbers between 100 and 200 including both
 
-For Floating point numbers
+
+For Floating point numbers:
 random_float = random.random()--> Not including 1, thus [0,1)
 
-For producing random numbers between 0 and 5
+For producing random numbers between 0 and 5:
 random_float = random.random()*5 : But not including 5
 
 Lists:
