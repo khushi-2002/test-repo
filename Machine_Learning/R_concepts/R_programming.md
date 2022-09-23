@@ -58,3 +58,44 @@ Example:
 
 * Remove or uninstall package
 > remove('package_name')
+
+## 3. Data Stored for Analysis using R:
+
+Three ways to store the data for analysis 
+* With the help of data variables and create own data tables
+* With the prebuilt datasets that comes with R libraries
+* With the csv files
+
+### 1. Prebuilt Datasets
+
+> library(help ="datasets")
+data()
+
+Iris is one of the dataset which consist of properties of flowers such as petal length, petal width, sepal length and sepal width
+
+* For displaying all the rows of the iris dataset
+> iris
+
+* For displaying the structure of the iris
+> str(iris)
+
+* For loading it into the workspace
+> data("iris")
+
+### 2. Manual
+> x <- (1:30) *where including 30 as well*  
+> x <- c(23,56,2,3)  
+> x <- seq(0,20, by=5) *where by is the stepsize including 20 as well*  
+> y <- scan()   *where it takes input from the console until we hit enter two times*
+
+### 3. With the help of Csv files or text files
+
+Text files are nothing but tab seperated files
+
+> customer <- read.csv('path',header=TRUE)
+> products <- read.table('path',header=TRUE, sep='\t') 
+
+In order to view the customer table in tabular format
+
+>   View(customer)
+
