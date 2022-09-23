@@ -40,3 +40,21 @@ Use # tag
 * For removing all the variables:
 > rm (list= ls())
 
+## 2. Packages
+
+* browseURL('Url') --> Use to browse the URL and open the URL in new tab
+
+* install.packages('package_name')
+
+Example:
+> install.packages('package_name')
+* LiblineaR is a package which used to analysis the linear progression models
+
+* Load packages in the program:
+> require('package_name')
+
+* Detach package from the program:
+> detach(package:'package_name', unload=TRUE)
+
+* Remove or uninstall package
+> remove('package_name')
