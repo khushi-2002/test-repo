@@ -15,11 +15,11 @@
  *where c is the concentenation function*
 
 * For storing continous values in a variable:
-> a <- [1:10]   
+> a <- (1:10)
 *stores value from 1 to 10*
 
 * For adding the values of two arrays
-> a <- b<- [1:20]    
+> a <- b<- (1:20)   
 Assign the value in both the variables from 1 to 20  
 a+b-->> Add the values together like [2 4 6....] and gives the output
 
