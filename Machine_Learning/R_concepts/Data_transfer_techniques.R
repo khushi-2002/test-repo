@@ -102,6 +102,7 @@ hist(customer$Age, breaks = 5)
 # For defining the range of the plot
 hist(customer$Age, breaks = c(0,20,40,60,80), col="red", freq = TRUE, main="Histogram")
 
+barplot(y[order(-y)], col="red",)
 
 
 
