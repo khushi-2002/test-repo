@@ -99,3 +99,58 @@ In order to view the customer table in tabular format
 
 >   View(customer)
 
+## 4. Barplots
+
+* To find the frequency distribution of one column
+> y <- table(customer$Region)
+
+* To plot the graph
+
+> barplot(y[order(y)])
+
+1. To change the orientation:  
+ Properties of bar plot
+#### Arranging in increasing order
+> barplot(y[order(y)])
+
+#### Arranging in decreasing order
+> barplot(y[order(-y)])
+
+#### #To change the orientation of the graph  
+>barplot(y[order(y)],horiz=TRUE)
+
+#### To change the color of the graph  
+>barplot(y[order(y)],horiz = TRUE, col="Red")
+
+
+#### To change the color of each plot
+>barplot(y[order(y)],horiz = TRUE, col= c("Red", "blue", "pink", "green"))
+
+#### To remove the border
+>barplot(y[order(y)], horiz = TRUE, col= c("red", "blue", "pink","green"), border='NA')
+
+#### To give the title
+>barplot(y[order(y)], horiz = TRUE, col= c("red", "blue", "pink","green"), border='NA', main="The Frequency of Region")
+
+#### To give the x axis title  
+>barplot(y[order(y)], horiz = TRUE, col= c("red", "blue", "pink","green"), border='NA', xlab ="No of Customers" )
+
+#### Export the data into the image format  
+
+>png(filename = "C:/Users/Khushi/OneDrive/Desktop/python/Machine_Learning/R_concepts/barplot.png")  
+barplot(y[order(y)], col="pink", main="The Frequency distribution through region", xlab="No of Customers")  
+dev.off() --> Needs to be off this!
+
+## 5. Histograms
+
+### Histograms
+### Used for finding frequency within the range
+>hist(customer$Age)
+
+### For showing only 5 bars
+>hist(customer$Age, breaks = 5)
+
+
+
+
+
