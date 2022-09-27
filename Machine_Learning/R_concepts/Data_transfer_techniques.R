@@ -26,6 +26,7 @@ x <- (1:10)
 y <- c(1,2,4,56,7)
 z <- seq(0,20, by=5)
 
+
 #For taking input from the console
 a <- scan()
 
