@@ -8,7 +8,7 @@ from tkinter import ttk # provide access to use the TK widgets
 class contact:
     def __init__(self, root ):
         self.root=root # Stores the container of my application and can be accessible from anywhere
-        self.create_left_lo~go() # calling the function for creating the logo
+        self.create_left_logo() # calling the function for creating the logo
     
     # For displaying the logo
     def create_left_logo(self):
