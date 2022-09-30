@@ -6,6 +6,8 @@ from tkinter import ttk # provide access to use the TK widgets
 
 
 class contact:
+    
+
     def __init__(self, root ):
         self.root=root # Stores the container of my application and can be accessible from anywhere
         self.create_left_logo() # calling the function for creating the logo
@@ -16,6 +18,7 @@ class contact:
         label = Label(image= photo)
         label.image = photo
         label.grid(row=0, column=0)
+
            
 
 if __name__ == '__main__': # starts the execution from here
