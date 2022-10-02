@@ -11,6 +11,7 @@ class contact:
     def __init__(self, root ):
         self.root=root # Stores the container of my application and can be accessible from anywhere
         self.create_left_logo() # calling the function for creating the logo
+        self.create_label_frame() #calling the function for creating the frame
     
     # For displaying the logo
     def create_left_logo(self):
@@ -22,11 +23,11 @@ class contact:
     # For displaying the labelframe, label, entry fields and button
     
     def create_label_frame(self):
-        labelFrame= labelFrame(self.root, text="Create New Contact", bg="sjy blue", font="helvetica 10")
+        labelFrame= LabelFrame(self.root, text="Create New Contact", bg="sky blue", font="helvetica 10")
         labelFrame.grid(row=0, column=1, padx=8, pady=8, sticky='ew')
         Label(labelFrame, text='Name:', bg="green", fg="white").grid(row=1, column=1, sticky=W, pady=2, padx=15)
         self.namefield= Entry(labelFrame)
-        self.namefield.grid(row=2, column=2, sticky=W, padx=5, pady=2)
+        self.namefield.grid(row=1, column=2, sticky=W, padx=5, pady=2)
         Label(labelFrame, text='Email:', bg="brown", fg="white").grid(row=2, column=1, sticky=W, pady=2, padx=15)
         self.emailfield= Entry(labelFrame)
         self.emailfield.grid(row=2,column=2,sticky=W,padx=5,pady=2)
