@@ -10,14 +10,19 @@ class contact:
 
     def __init__(self, root ):
         self.root=root # Stores the container of my application and can be accessible from anywhere
+        self.create_gui()
+        ttk.style = ttk.Style()
+        ttk.style.configure("Treeview", font=('helvetica',10))
+        ttk.style.configure("Treeview.Heading", font=('helvetica',12, 'bold'))
+        
+    def create_gui(self):
         self.create_left_logo() # calling the function for creating the logo
         self.create_label_frame() #calling the function for creating the frame
         self.create_message_area()
         self.create_tree_view()
-        ttk.style = ttk.Style()
-        ttk.style.configure("Treeview", font=('helvetica',10))
-        ttk.style.configure("Treeview.Heading", font=('helvetica',12, 'bold'))
-    
+        self.create_scrollbar()
+        self.create_bottom_buttons()
+        
     # For displaying the logo
     def create_left_logo(self):
         photo = PhotoImage(file= 'icons/contacts_logo.gif') 
@@ -60,8 +65,13 @@ class contact:
     
     # For creating the scroll bar
     def create_scrollbar(self):
-        self.scrollbar= Scrollbar(orient='vertical', command=self.tree.yview)
+        self.scrollbar= Scrollbar(orient='vertical', command=self.tree.yview) # yview helps to scroll vertically
         self.scrollbar.grid(row=6, column=3, rowspan=10, sticky="sn")
+        
+    # For creating the bottom buttons
+    def create_bottom_buttons(self):
+        Button(text='Delete Selected', command="", bg="red",fg="white").grid(row=8, column=0, sticky=W, pady=10, padx=20)
+        Button(text="Modify Selected", command="", bg="purple", fg="white").grid(row=8, column=1, sticky=W)   
             
                 
  # First parameter defines the position it gonna be placed!       
